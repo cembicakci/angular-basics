@@ -1,0 +1,41 @@
+<h2>Directive Örnekleri (Yeni Syntax)</h2>
+
+<!-- @if örneği -->
+@if (isLoggedIn) {
+  <div>Hoşgeldin kullanıcı!</div>
+} @else {
+  <div>Lütfen giriş yapınız.</div>
+}
+
+<hr />
+
+<!-- @for örneği -->
+<ul>
+  @for (item of items; track $index) {
+    <li>{{ item }}</li>
+  }
+</ul>
+
+<hr />
+
+<!-- @switch örneği -->
+@switch (selectedFramework) {
+  @case ('Angular') { <p>Sen Angular seçtin</p> }
+  @case ('React') { <p>Sen React seçtin</p> }
+  @case ('Vue') { <p>Sen Vue seçtin</p> }
+  @default { <p>Başka bir framework seçilmedi.</p> }
+}
+
+<hr />
+
+<!-- ngClass örneği -->
+<p [ngClass]="{ 'active-text': isActive, 'inactive-text': !isActive }">
+  Bu yazı ngClass ile renklendirildi.
+</p>
+
+<hr />
+
+<!-- ngStyle örneği -->
+<p [ngStyle]="{ 'font-size': isActive ? '20px' : '14px', 'color': isActive ? 'green' : 'red' }">
+  Bu yazı ngStyle ile stil aldı.
+</p>
