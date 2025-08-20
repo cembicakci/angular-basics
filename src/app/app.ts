@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { User } from './user/user';
 import { DataBinding } from './data-binding/data-binding';
 import { Directives } from './directives/directives';
+import { StructuralDirective } from './structural-directive/structural-directive';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,8 @@ import { Directives } from './directives/directives';
     RouterOutlet, 
     // User, 
     // DataBinding, 
-    Directives
+    // Directives,
+    StructuralDirective
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss'
