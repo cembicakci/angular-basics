@@ -5,6 +5,7 @@ import { DataBinding } from './data-binding/data-binding';
 import { Directives } from './directives/directives';
 import { StructuralDirective } from './structural-directive/structural-directive';
 import { StructuralDirectiveNgFor } from './structural-directive-ng-for/structural-directive-ng-for';
+import { StructuralDirectiveNgswitch } from './structural-directive-ngswitch/structural-directive-ngswitch';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,8 @@ import { StructuralDirectiveNgFor } from './structural-directive-ng-for/structur
     // DataBinding, 
     // Directives,
     // StructuralDirective
-    StructuralDirectiveNgFor
+    // StructuralDirectiveNgFor,
+    StructuralDirectiveNgswitch
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss'
