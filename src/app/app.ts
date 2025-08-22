@@ -4,6 +4,7 @@ import { User } from './user/user';
 import { DataBinding } from './data-binding/data-binding';
 import { Directives } from './directives/directives';
 import { StructuralDirective } from './structural-directive/structural-directive';
+import { StructuralDirectiveNgFor } from './structural-directive-ng-for/structural-directive-ng-for';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,8 @@ import { StructuralDirective } from './structural-directive/structural-directive
     // User, 
     // DataBinding, 
     // Directives,
-    StructuralDirective
+    // StructuralDirective
+    StructuralDirectiveNgFor
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss'
