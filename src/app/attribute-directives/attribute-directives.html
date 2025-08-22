@@ -1,0 +1,50 @@
+<div class="row text-center">
+	<div class="col-12 m-3">
+		<h2>Attribute Directives - ngClass</h2>
+		<hr />
+	</div>
+</div>
+
+<div class="row text-center pt-3">
+	<div class="col-4">
+		<h3 [class]="textColor">This is the first example of ngClass</h3>
+		<br>
+		<button class="btn btn-primary" (click)="textColor = 'text-success'">Make it Green</button>
+		<button class="btn btn-danger" (click)="textColor = 'text-danger'">Make it Red</button>
+		<button class="btn btn-warning" (click)="textColor = 'text-warning'">Make it Yellow</button>
+		<button class="btn btn btn-info" (click)="textColor = 'text-info'">Make it Blue</button>
+	</div>
+
+	<div class="col-4">
+		<h3 [ngClass]="isTextGreen ? 'text-success' : 'text-danger'">This is the second example of ngClass</h3>
+		<br>
+		<input type="checkbox" id="checkbox" [(ngModel)]="isTextGreen">Change Color
+	</div>
+
+	<div class="col-4">
+		<h3 [ngClass]="userClass">This is the third example of ngClass</h3>
+		<br>
+		<input type="text" class="form-control" placeholder="Ex: text-success" [(ngModel)]="userClass">
+	</div>
+</div>
+
+<div class="row text-center">
+	<div class="col-12 m-3">
+		<h2>Attribute Directives - ngStyle</h2>
+		<hr />
+	</div>
+</div>
+
+
+<div class="row text-center pt-3">
+	<div class="col-4">
+		<h3 [ngStyle]="{'color': styleColor}">This is the first example of ngStyle</h3>
+		<br>
+		<button class="btn btn-primary" (click)="updateColor('green')">Update it Green</button>
+		<button class="btn btn-warning" (click)="updateColor('yellow')">Update it Yellow</button>
+	</div>
+
+	<div class="col-4">
+		<h3 [ngStyle]="customClass">This is the third example of ngClass</h3>
+	</div>
+</div>

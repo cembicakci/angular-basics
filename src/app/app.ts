@@ -6,6 +6,7 @@ import { Directives } from './directives/directives';
 import { StructuralDirective } from './structural-directive/structural-directive';
 import { StructuralDirectiveNgFor } from './structural-directive-ng-for/structural-directive-ng-for';
 import { StructuralDirectiveNgswitch } from './structural-directive-ngswitch/structural-directive-ngswitch';
+import { AttributeDirectives } from './attribute-directives/attribute-directives';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,8 @@ import { StructuralDirectiveNgswitch } from './structural-directive-ngswitch/str
     // Directives,
     // StructuralDirective
     // StructuralDirectiveNgFor,
-    StructuralDirectiveNgswitch
+    // StructuralDirectiveNgswitch,
+    AttributeDirectives
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss'
