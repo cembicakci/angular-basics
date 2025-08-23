@@ -8,11 +8,12 @@ import { StructuralDirectiveNgFor } from './structural-directive-ng-for/structur
 import { StructuralDirectiveNgswitch } from './structural-directive-ngswitch/structural-directive-ngswitch';
 import { AttributeDirectives } from './attribute-directives/attribute-directives';
 import { Signals } from './signals/signals';
+import { LinkedSignal } from './linked-signal/linked-signal';
 
 @Component({
   selector: 'app-root',
   imports: [
-    RouterOutlet, 
+    RouterOutlet,
     // User, 
     // DataBinding, 
     // Directives,
@@ -20,7 +21,8 @@ import { Signals } from './signals/signals';
     // StructuralDirectiveNgFor,
     // StructuralDirectiveNgswitch,
     // AttributeDirectives,
-    Signals
+    // Signals,
+    LinkedSignal
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss'
