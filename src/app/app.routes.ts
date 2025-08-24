@@ -1,3 +1,17 @@
 import { Routes } from '@angular/router';
 
-export const routes: Routes = [];
+import { User } from './user/user';
+import { DataBinding } from './data-binding/data-binding';
+import { StructuralDirective } from './structural-directive/structural-directive';
+import { AttributeDirectives } from './attribute-directives/attribute-directives';
+import { PageNotFound } from './page-not-found/page-not-found';
+
+export const routes: Routes = [
+	// { path: '', component: User },
+	{ path: '', redirectTo: 'user', pathMatch: 'full' },
+	{ path: 'user', component: User },
+	{ path: 'data-binding', component: DataBinding },
+	{ path: 'structural-directive', component: StructuralDirective },
+	{ path: 'attribute-directive', component: AttributeDirectives },
+	{ path: '**', component: PageNotFound }
+];
