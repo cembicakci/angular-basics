@@ -1,0 +1,39 @@
+<div class="container">
+	<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" class="border border-primary m-2 p-2">
+
+		<pre>form: {{ user | json }}</pre>
+
+
+		<h2 class="text-center m-2">User Information</h2>
+		<div class="form-group m-2">
+			<label>First Name</label>
+			<input type="text" class="form-control" placeholder="Enter first name" name="firstName"
+				[(ngModel)]="user.firstName">
+		</div>
+		<div class="form-group m-2">
+			<label>Last Name</label>
+			<input type="text" class="form-control" placeholder="Enter last name" name="lastName"
+				[(ngModel)]="user.lastName">
+		</div>
+
+		<div class="form-group m-2">
+			<label>Email</label>
+			<input type="email" class="form-control" placeholder="Enter email address" name="email"
+				[(ngModel)]="user.email">
+		</div>
+
+		<div class="form-group m-2">
+			<label>Password</label>
+			<input type="password" class="form-control" placeholder="Enter email password" name="password"
+				[(ngModel)]="user.password">
+		</div>
+
+		<div class="form-group m-2">
+			<label>Check me out</label>
+			<input type="checkbox" class="form-check-input" name="isCheck" [(ngModel)]="user.isCheck">
+		</div>
+
+		<button class="btn btn-success m-2">Submit</button>
+		<button class="btn btn-warning m-2" (click)="setValue(userForm)">Set Value</button>
+	</form>
+</div>
