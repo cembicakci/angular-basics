@@ -2,30 +2,36 @@
 	<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" class="border border-primary m-2 p-2">
 
 		<pre>form: {{ user | json }}</pre>
+		<pre>valid: {{ userForm.valid }}</pre>
+		<pre>invalid: {{ userForm.invalid }}</pre>
 
 
 		<h2 class="text-center m-2">User Information</h2>
 		<div class="form-group m-2">
 			<label>First Name</label>
 			<input type="text" class="form-control" placeholder="Enter first name" name="firstName"
-				[(ngModel)]="user.firstName">
+				[(ngModel)]="user.firstName" required minlength="5" maxlength="15" pattern="[a-zA-Z]+" #firstName="ngModel">
+			<p class="text-danger" *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)">
+				@if(firstName.errors?.['pattern']) {
+					<p class="text-danger">First Name should contain only alphabets</p>
+				}
 		</div>
 		<div class="form-group m-2">
 			<label>Last Name</label>
 			<input type="text" class="form-control" placeholder="Enter last name" name="lastName"
-				[(ngModel)]="user.lastName">
+				[(ngModel)]="user.lastName" maxlength="15" required pattern="[a-zA-Z]+">
 		</div>
 
 		<div class="form-group m-2">
 			<label>Email</label>
 			<input type="email" class="form-control" placeholder="Enter email address" name="email"
-				[(ngModel)]="user.email">
+				[(ngModel)]="user.email" required>
 		</div>
 
 		<div class="form-group m-2">
 			<label>Password</label>
 			<input type="password" class="form-control" placeholder="Enter email password" name="password"
-				[(ngModel)]="user.password">
+				[(ngModel)]="user.password" required>
 		</div>
 
 		<div class="form-group m-2">
@@ -33,7 +39,9 @@
 			<input type="checkbox" class="form-check-input" name="isCheck" [(ngModel)]="user.isCheck">
 		</div>
 
-		<button class="btn btn-success m-2">Submit</button>
+		<button class="btn btn-success m-2" [disabled]="!userForm.valid">Submit</button>
 		<button class="btn btn-warning m-2" (click)="setValue(userForm)">Set Value</button>
+		<button class="btn btn-primary m-2" (click)="patchValue(userForm)">Patch Value</button>
+		<button class="btn btn-secondary m-2" (click)="resetValue(userForm)">Reset</button>
 	</form>
 </div>

@@ -30,7 +30,17 @@ export class TemplateDrivenForm implements OnInit {
       email: 'john@doe.com',
       password: '12345',
       isCheck: false,
-    }
+    } 
     userForm.setValue(obj);
+  };
+  patchValue(userForm: NgForm) {
+    let obj = {
+      firstName: 'Jane',
+      lastName: 'Dweight',
+    }
+    userForm.form.patchValue(obj);
+  };
+  resetValue(userForm: NgForm) {
+    userForm.resetForm();
   }
 }
