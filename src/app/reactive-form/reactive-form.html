@@ -1,0 +1,81 @@
+<div class="container">
+  <form class="border border-primary rounded m-2 p-2" [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+    <h2 class="text-center m-2">Reactive Form: User Information</h2>
+
+    <!-- First Name -->
+    <div class="form-group m-2">
+      <label>First Name</label>
+      <input type="text" class="form-control" formControlName="firstName">
+      <div class="text-danger" *ngIf="reactiveForm.get('firstName')?.invalid && reactiveForm.get('firstName')?.touched">
+        First name is required (min 3 chars).
+      </div>
+    </div>
+
+    <!-- Last Name -->
+    <div class="form-group m-2">
+      <label>Last Name</label>
+      <input type="text" class="form-control" formControlName="lastName">
+      <div class="text-danger" *ngIf="reactiveForm.get('lastName')?.invalid && reactiveForm.get('lastName')?.touched">
+        Last name is required.
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="form-group m-2">
+      <label>Email</label>
+      <input type="email" class="form-control" formControlName="email">
+      <div class="text-danger" *ngIf="reactiveForm.get('email')?.invalid && reactiveForm.get('email')?.touched">
+        Please enter a valid email.
+      </div>
+    </div>
+
+    <!-- Password -->
+    <div class="form-group m-2">
+      <label>Password</label>
+      <input type="password" class="form-control" formControlName="password">
+      <div class="text-danger" *ngIf="reactiveForm.get('password')?.invalid && reactiveForm.get('password')?.touched">
+        Password is required (min 6 chars).
+      </div>
+    </div>
+
+    <!-- Checkbox -->
+    <div class="form-group m-2 form-check">
+      <input type="checkbox" class="form-check-input" formControlName="isChecked">
+      <label class="form-check-label">Check me out</label>
+      <div class="text-danger" *ngIf="reactiveForm.get('isChecked')?.invalid && reactiveForm.get('isChecked')?.touched">
+        You must accept the terms.
+      </div>
+    </div>
+
+    <!-- Address -->
+    <div class="m-2" formGroupName="address">
+      <h5 class="m-2">Address</h5>
+
+      <div class="form-group m-2">
+        <label>City</label>
+        <input type="text" class="form-control" formControlName="city">
+        <div class="text-danger" *ngIf="reactiveForm.get('address.city')?.invalid && reactiveForm.get('address.city')?.touched">
+          City is required.
+        </div>
+      </div>
+
+      <div class="form-group m-2">
+        <label>Street</label>
+        <input type="text" class="form-control" formControlName="street">
+        <div class="text-danger" *ngIf="reactiveForm.get('address.street')?.invalid && reactiveForm.get('address.street')?.touched">
+          Street is required.
+        </div>
+      </div>
+
+      <div class="form-group m-2">
+        <label>Code</label>
+        <input type="text" class="form-control" formControlName="code">
+        <div class="text-danger" *ngIf="reactiveForm.get('address.code')?.invalid && reactiveForm.get('address.code')?.touched">
+          Code must be a 5-digit number.
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn-success m-2" type="submit" [disabled]="reactiveForm.invalid">Submit</button>
+  </form>
+</div>
