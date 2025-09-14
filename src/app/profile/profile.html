@@ -1,0 +1,13 @@
+<div class="m-2">
+	@if(isEligible) {
+	<h4 class="text-success">You are Eligible for a premium subscription</h4>
+	}@else {
+	<h4 class="text-danger">You are not Eligible for a premium subscription</h4>
+	}
+	<ul>
+		<li>Id: {{ userData.id }}</li>
+		<li>Name: {{ userData.name }}</li>
+		<li>Username: {{ userData.username }}</li>
+		<li>Email: {{ userData.email }}</li>
+	</ul>
+</div>

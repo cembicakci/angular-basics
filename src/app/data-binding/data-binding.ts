@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { SharedData } from '../shared-data';
 
 @Component({
   selector: 'app-data-binding',
@@ -13,6 +14,11 @@ export class DataBinding {
   image: string = "https://picsum.photos/400/400";
 
   random = "";
+  userData: any;
+
+  constructor(private _sharedData: SharedData) {
+    this.userData = this._sharedData.userData;
+  }
 
   onSave() {
     console.log('Data saved successfully!');
@@ -21,4 +27,5 @@ export class DataBinding {
   onChange() {
     alert('Country has changed!');
   }
+
 }
