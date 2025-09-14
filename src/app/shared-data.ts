@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,8 +6,14 @@ import { Injectable } from '@angular/core';
 })
 export class SharedData {
 
-  constructor() {
+  API_URL = 'https://jsonplaceholder.typicode.com/users';
 
+  constructor(private _http: HttpClient) {
+
+  }
+
+  getUserData() {
+    return this._http.get(this.API_URL);
   }
 
   userData: {
