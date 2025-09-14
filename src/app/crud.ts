@@ -1,0 +1,18 @@
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { IUser } from './iuser';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class Crud {
+
+  BASE_URL = 'http://localhost:3000/Users';
+
+  constructor(private http: HttpClient) { }
+
+  getData() {
+    return this.http.get<IUser[]>(this.BASE_URL);
+  }
+
+}

@@ -1,0 +1,34 @@
+{
+	"Users": [
+		{
+			"id": 1,
+			"name": "Cem",
+			"username": "cembicakci",
+			"email": "cembicakci@gmail.com"
+		},
+		{
+			"id": 2,
+			"name": "John",
+			"username": "john_doe",
+			"email": "john_doe@gmail.com"
+		},
+		{
+			"id": 3,
+			"name": "Jane",
+			"username": "jane_doe",
+			"email": "jane_doe@gmail.com"
+		},
+		{
+			"id": 4,
+			"name": "Alice",
+			"username": "alice_wonder",
+			"email": "alice@gmail.com"
+		},
+		{
+			"id": 5,
+			"name": "Bob",
+			"username": "bob_builder",
+			"email": "bob@gmail.com"
+		}
+	]
+}
