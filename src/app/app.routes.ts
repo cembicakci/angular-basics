@@ -10,6 +10,9 @@ import { TemplateDrivenForm } from './template-driven-form/template-driven-form'
 import { ReactiveForm } from './reactive-form/reactive-form';
 import { Profile } from './profile/profile';
 import { CrudOperations } from './crud-operations/crud-operations';
+import { AddUser } from './add-user/add-user';
+import { UpdateUser } from './update-user/update-user';
+import { ViewUser } from './view-user/view-user';
 
 export const routes: Routes = [
 	// { path: '', component: User },
@@ -23,5 +26,8 @@ export const routes: Routes = [
 	{ path: 'rf', component: ReactiveForm},
 	{ path: 'profile', component: Profile},
 	{ path: 'crud', component: CrudOperations},
+	{ path: 'adduser', component: AddUser},
+	{ path: 'updateuser/:id', component: UpdateUser},
+	{ path: 'viewuser/:id', component: ViewUser},
 	{ path: '**', component: PageNotFound }
 ];
