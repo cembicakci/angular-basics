@@ -22,4 +22,36 @@
 			<app-child [childInputProperty]="parentProperty" (childOutputProperty)="receiveData($event)"></app-child>
 		</div>
 	</div>
+
+	<div class="row m-3">
+		<div class="col-12">
+			<div class="text-warning">
+				<h2>Example of 3 (Sibling Components)</h2>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-6">
+			<app-sibling1 (sigbling1Event)="receiveEvent1($event)" [sibling1Property]="sibling2Data"></app-sibling1>
+		</div>
+		<div class="vr p-0"></div>
+		<div class="col-5">
+			<app-sibling2 [sigbling2Property]="sibling1Data" (Sigbling2Event)="receiveEvent2($event)"></app-sibling2>
+		</div>
+	</div>
+
+
+	<div class="row m-3">
+		<div class="col-12">
+			<div class="text-warning">
+				<h2>Example of 4 (Parent -> Child using ViewChild)</h2>
+			</div>
+		</div>
+	</div>
+	<div class="row m-3">
+		<div class="col-12">
+			<app-reusable #reusable></app-reusable>
+		</div>
+	</div>
 </div>
