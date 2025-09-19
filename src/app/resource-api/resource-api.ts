@@ -23,7 +23,6 @@ export class ResourceApi implements OnInit {
     //   this.apiData = res;
     // })
 
-    this.apiData = this.resource.rxResourceData;
   }
 
 }

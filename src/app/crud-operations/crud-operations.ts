@@ -3,10 +3,11 @@ import { Crud } from '../Services/crud';
 import { IUser } from '../iuser';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { Reusable } from '../reusable/reusable';
 
 @Component({
   selector: 'app-crud-operations',
-  imports: [CommonModule],
+  imports: [CommonModule, Reusable],
   templateUrl: './crud-operations.html',
   styleUrls: ['./crud-operations.scss']   
 })
