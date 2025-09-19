@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Crud } from '../crud';
+import { Crud } from '../Services/crud';
 
 @Component({
   selector: 'app-add-user',

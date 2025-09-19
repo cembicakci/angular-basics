@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
-import { Crud } from '../crud';
+import { Crud } from '../Services/crud';
 import { IUser } from '../iuser';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';

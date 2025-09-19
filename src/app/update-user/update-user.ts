@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Crud } from '../crud';
+import { Crud } from '../Services/crud';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 

@@ -1,7 +1,7 @@
 
 import { ChangeDetectorRef, Component, Inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Crud } from '../crud';
+import { Crud } from '../Services/crud';
 
 @Component({
   selector: 'app-view-user',

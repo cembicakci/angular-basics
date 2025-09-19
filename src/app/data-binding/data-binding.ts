@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { SharedData } from '../shared-data';
+import { SharedData } from '../Services/shared-data';
 
 @Component({
   selector: 'app-data-binding',
